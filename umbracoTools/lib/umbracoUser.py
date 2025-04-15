@@ -8,7 +8,7 @@ sys.path.append('../lib')
 from colors import colors
 
 class umbracoUser():
-    def __init__(self, id, userDisabled, userName, userLogin, userEmail, userLanguage, lastLoginDate):
+    def __init__(self, id, userDisabled, userName, userLogin, userEmail, userLanguage, lastLoginDate, userGroupIds):
         self.id = id
         self.userDisabled = userDisabled
         self.userName = userName
@@ -16,6 +16,7 @@ class umbracoUser():
         self.userEmail = userEmail
         self.userLanguage = userLanguage
         self.lastLoginDate = lastLoginDate
+        self.userGroupIds = userGroupIds.split(", ")
         self.groups = []
 
     
@@ -27,8 +28,8 @@ class umbracoUser():
         groups_strings = []
 
         for group in self.groups:
-            inner_group = group[0]
-            group_string = inner_group.to_string()
+            # inner_group = group[0]
+            group_string = group.to_string() # inner_group.to_string()
             groups_strings.append(group_string)
         
         groups_string = ', '.join(groups_strings)
