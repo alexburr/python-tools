@@ -1,3 +1,5 @@
+# UNTESTED
+
 from PIL import Image, ImageFont, ImageDraw  # requires python -m pip install Pillow
 
 font_name = "cour"

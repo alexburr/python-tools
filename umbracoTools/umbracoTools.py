@@ -24,7 +24,6 @@ sys.path.append('../lib')
 
 from dbCreds import dbCreds
 from dbConnection import dbConnection
-from pdfUtils import *
 from logUtil import logUtil
 
 # -------
